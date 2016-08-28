@@ -27,14 +27,15 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-  <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["api_key_google"] %>&callback=initMap">
-  </script>
+
   <script src="/javascript/mapdrops.js"></script>
   <script src="/javascript/application.js"></script>
   <script src="/javascript/500px.js"></script>
   <script src="/javascript/handlebars.js"></script>
-
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["api_key_google"] %>&callback=initMap">
+  </script>
+  
   <%= erb :'_loader_icon' %>
 </body>
 </html>
