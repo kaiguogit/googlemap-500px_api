@@ -1,0 +1,16 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#map {
+  width: 100%;
+  height:500px;
+}
+.content{
+  background-color: #EEE;
+}
+.marker{
+  margin: 10px 0px;
+  cursor: pointer;
+}

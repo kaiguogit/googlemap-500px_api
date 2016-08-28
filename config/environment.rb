@@ -8,6 +8,13 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra/contrib/all' # Requires cookies, among other things
 
+#load dotenv
+require 'dotenv'
+Dotenv.load
+
+#json
+require 'json'
+
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 APP_NAME = APP_ROOT.basename.to_s
 
