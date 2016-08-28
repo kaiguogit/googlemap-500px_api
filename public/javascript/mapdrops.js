@@ -50,7 +50,10 @@ function createMarker(myLatLng, title, description){
   marker.addListener('click', toggleBounce);
   marker.addListener('click', toggleInfoWindow);
   marker.addListener('dragend', function(){
-
+    for (var i = 0; i < allMarkers.length; i++) {
+      allMarkers[i].infoWindow.close(map);
+    }
+     this.infoWindow.open(map, this);
     var pos = markerPosition(this);
     searchPhoto(pos);
   });
@@ -108,4 +111,10 @@ function pinMyLocation(){
     // Browser doesn't support Geolocation
     handleLocationError(false, myLocationWindow, map.getCenter());
   } 
+}
+
+function createMarkerCheckbox(name){
+  var item = $('<div>').addClass("marker list-group-item active").attr("name", name).text(name);
+      // item = $('<>').append(item);
+  $('.marker_list').append(item);
 }

@@ -10,10 +10,8 @@ $(function(){
       marker.setVisible(false);
     }
   });
+
 });
 
-function createMarkerCheckbox(name){
-  var item = $('<div>').addClass("marker list-group-item active").attr("name", name).text(name);
-      // item = $('<>').append(item);
-  $('.marker_list').append(item);
-}
+
+

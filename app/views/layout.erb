@@ -15,11 +15,27 @@
   <!--
   -->
   <link rel="stylesheet" href="/stylesheets/application.css">
+  <link rel="stylesheet" href="/stylesheets/loader.css">
 
   <title></title>
 </head>
 <body>
   <%= yield %>
+
+  <script src="/javascript/jquery-3.1.0.min.js"></script>
+  <script src="/javascript/initmap.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["api_key_google"] %>&callback=initMap">
+  </script>
+  <script src="/javascript/mapdrops.js"></script>
+  <script src="/javascript/application.js"></script>
+  <script src="/javascript/500px.js"></script>
+  <script src="/javascript/handlebars.js"></script>
+
+  <%= erb :'_loader_icon' %>
 </body>
 </html>
 
