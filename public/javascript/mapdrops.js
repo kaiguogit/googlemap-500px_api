@@ -89,7 +89,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
 function pinMyLocation(){
 
-  // var myLocationWindow = new google.maps.InfoWindow({map: map});
+   var myLocationWindow = new google.maps.InfoWindow({map: map});
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       var pos = {
@@ -101,8 +101,6 @@ function pinMyLocation(){
     var description="";
     createMarker(pos, title, description);
     createMarkerCheckbox(title);
-      // myLocationWindow.setPosition(pos);
-      // myLocationWindow.setContent('Your location.');
       map.setCenter(pos);
     }, function() {
       handleLocationError(true, myLocationWindow, map.getCenter());
